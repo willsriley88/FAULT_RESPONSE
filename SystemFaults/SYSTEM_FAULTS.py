@@ -4,9 +4,9 @@ import json
 
 class DBFaultResponse:
     response = {
-        "CELL_NAME": None,
-        "SYSTEM_NAME": None,
-        "FAULT": None
+        "CELL_NAME": "",
+        "SYSTEM_NAME": "",
+        "FAULT": ""
     }
 
 
