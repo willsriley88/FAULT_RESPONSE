@@ -6,8 +6,7 @@ class DBFaultResponse:
     response = {
         "CELL_NAME": "",
         "SYSTEM_NAME": "",
-        "FAULT": "",
-        "COMPONENT_NAME": ""
+        "FAULT": ""
     }
 
 
