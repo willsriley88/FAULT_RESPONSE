@@ -4,10 +4,10 @@ import json
 
 class DBFaultResponse:
     response = {
-        "CELL_NAME": "",
-        "SYSTEM_NAME": "",
-        "FAULT": "",
-        "COMPONENT_NAME": ""
+        "CELL_NAME": '',
+        "SYSTEM_NAME": '',
+        "FAULT": '',
+        "COMPONENT_NAME": ''
     }
 
 
@@ -20,9 +20,10 @@ class SystemFaults:
         self.fault_response.response["CELL_NAME"] = self.cell_name
         self.fault_response.response["SYSTEM_NAME"] = self.system_name
 
-    def update_response(self, fault):
+    def update_response(self, component, fault):
         try:
             self.fault_response.response["FAULT"] = fault
+            self.fault_response.response["COMPONENT_NAME"] = component
             requests.post(url=self.fault_url, json=self.fault_response.response)
         except Exception as e:
             return None
